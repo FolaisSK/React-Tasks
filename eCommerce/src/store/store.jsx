@@ -9,3 +9,5 @@ export const store = configureStore({
         getDefaultMiddleware.concat(productApi.middleware)
     )
 })
+
+export default store;

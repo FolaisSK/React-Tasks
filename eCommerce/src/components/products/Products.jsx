@@ -1,5 +1,4 @@
-import React from "react";
-import {useGetAllProductsQuery} from "../apis/productApi.jsx";
+import {useGetAllProductsQuery} from "../../apis/productApi.jsx";
 import styles from "./products.module.css"
 
 const Products = ()=>{

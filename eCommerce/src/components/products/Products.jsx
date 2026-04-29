@@ -1,5 +1,6 @@
 import {useGetAllProductsQuery} from "../../apis/productApi.jsx";
 import styles from "./products.module.css"
+import {Link} from "react-router";
 
 const Products = ()=>{
 
@@ -21,12 +22,15 @@ const Products = ()=>{
             <ul className={styles.products}>
                 {
                     data.map((product)=>(
-                        <div >
-                            <img className={styles.img} src={product.image} alt=""/>
-                            <p>{product.title}</p>
-                            <p>{product.price}</p>
-                            <p>{product.description}</p>
-                        </div>
+                        <Link to = {`/products/${product.id}`} key={product.id}>
+                            <div >
+                                <img className={styles.img} src={product.image} alt=""/>
+                                <p>{product.title}</p>
+                                <p>{product.price}</p>
+                                <p>{product.description}</p>
+                            </div>
+                        </Link>
+
                     ))
                 }
             </ul>

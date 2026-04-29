@@ -2,19 +2,24 @@ import {createBrowserRouter} from "react-router";
 import Login from "../auth/login/Login.jsx";
 import Register from "../auth/register/Register.jsx";
 import Products from "../components/products/Products.jsx"
+import ProductDetail from "../components/productID/ProductID.jsx"
 
 const router = createBrowserRouter([
     {
         path: "/login",
-        element:<Login />
+        element:<Login/>
     },
     {
         path: "/",
-        element:<Register />
+        element:<Register/>
     },
     {
         path: "/products",
         element:<Products/>
+    },
+    {
+        path: "/products/:productId",
+        element:<ProductDetail/>
     }
 ])
 
